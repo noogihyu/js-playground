@@ -7,7 +7,7 @@
     <title>4단 5단 출력 html</title>
 </head>
 <body>
-    <h1>4단, 5단 웹출력</h1>
+    <h1 id="x">X단 웹출력</h1>
     <script>
         var dan;
         var result;
@@ -15,6 +15,7 @@
         var num = Number(prompt("몇 단을 원하시나요?"));
 
         for(dan = num; dan < num + 1; dan++) {
+            document.getElementById("x").innerHTML = num + "단 웹출력";
             document.write(dan + " 단 시작!" + "<br>");
             for(i = 1; i < 10; i++) {
                 result = dan * i;
