@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>구구단 연습 , 반복문 사용</title>
+</head>
+<body>
+    <h1>구구단 웹출력</h1>
+
+    <p><input type="text" id="dan" placeholder="출력한 단수를 입력."></p>
+    <p><button onclick="goGugudan()">입력</button></p>
+
+    <p id="demo"></p>
+
+    <script>
+        function goGugudan() {
+            document.getElementById("demo").innerHTML = gugudan("num");
+        }
+        function gugudan() {
+            var num = document.getElementById("dan").value;
+            var i = 1;
+            var result = num * i;
+            
+            document.write("<h2>구구단 " + num + "단</h2>");
+            for(i; i < 10; i++) {
+                document.write(num + " * " + i + " = " + result + "<br>");
+                
+            }
+            document.write(num + "단 끝!" + "<br>");
+            document.write("<button><a href='gugudan6.html'>다른 단 보기</button>");
+        }    
+    </script>
+    
+</body>
+</html>
