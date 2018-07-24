@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>구구단 웹출력</title>
+</head>
+<body>
+    <h1>구구단 출력하기</h1>
+
+    
+    <p>보고 싶은 구구단 단수를 입력해 보세요.</p>
+    <br>
+    <input type="text" id="dan" placeholder="2~9의 수" />
+    <br>
+    <br>
+    <button onclick = "getDan()">getDan</button>
+    
+
+    <p id="demo"></p>
+
+    <script>
+        
+        function getDan() {
+
+            var dan = Number(document.getElementById("dan").value);
+            var i, result;
+
+            if(isNaN(dan)) {
+                gugudan = "2이상 9이하의 수를 입력하세요.";
+
+            } else if(dan < 2 || dan > 9) {
+                gugudan = "2이상 9이하의 값을 입력하세요.";
+
+            } else {
+                gugudan = dan + "단 시작!" + "<br>";
+
+                for(i = 1; i < 10; i++) {
+                    result = dan*i;
+                    gugudan += dan + " * " + i + " = " + result + "<br>";
+                }
+                gugudan += dan + "단 끝!" + "<br>";
+            }
+            document.getElementById("demo").innerHTML = gugudan;
+
+            return console.log(gugudan);
+
+        }
+
+    </script>
+    
+</body>
+</html>

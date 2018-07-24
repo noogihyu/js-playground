@@ -9,14 +9,14 @@
 <body>
     <h1>구구단 웹출력</h1>
 
-    <p><input type="text" id="dan" placeholder="출력한 단수를 입력."></p>
-    <p><button onclick="goGugudan()">입력</button></p>
+    <input type="text" id="dan" placeholder="출력한 단수를 입력.">
+    <button onclick="goGugudan()">입력</button>
 
     <p id="demo"></p>
 
     <script>
         function goGugudan() {
-            document.getElementById("demo").innerHTML = gugudan("num");
+            document.getElementById("demo").innerHTML = gugudan();
         }
         function gugudan() {
             var num = document.getElementById("dan").value;
