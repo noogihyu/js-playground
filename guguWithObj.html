@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>객체를 이용한 구구단 구현</title>
+</head>
+<body>
+    <div id = "gugudan"></div>
+    <script>
+        var gugu = {};
+
+        gugu.loope = function(dan) {
+            var loope = [];
+            for (var i = 0; i < 9; i++) {
+                loope += dan + " X " + (i+1) + " = ";
+            }
+            console.log(loope);
+            return loope;
+        }
+
+        gugu.gabs = function(dan) {
+            var gabs = [];
+            for (var i = 0; i < 9; i++) {
+                gabs.push(dan * (i+1));
+            }
+            console.log(gabs);
+            return gabs;
+        }
+
+        gugu.result = function(dan) {
+            var result = "";
+            for (var i = 0; i < 9; i++) {
+                result += dan + " X " + (i+1) + " = " + (dan * (i+1)) + "<br>";
+            }
+            //result += "</th>";
+            console.log(result);
+            document.getElementById('gugudan').innerHTML = document.write(result);
+        }
+
+        function main() {
+            for (var i = 2; i < 10; i++) {
+                gugu.result(i);
+                
+            }
+            
+        }
+        main();
+    </script>
+    
+</body>
+</html>
