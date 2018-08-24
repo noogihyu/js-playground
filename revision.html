@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        gugu = {};
+
+        function calcul(dan, dui) {
+            var rslt = [];
+
+            for(var i = 0; i < dui; i++) {
+                var noni = i + 1;
+                rslt[i] = dan * noni;
+            }
+            console.log(dan);
+            console.log(rslt);
+            return rslt;
+        }
+
+        function print(dan, dui, rslt) {
+            document.write("<h2>" + dan + "Dan</h2><br>");
+            for (var i = 0; i < dui; i++) {
+                var noni = i + 1;
+                document.write(dan + " X " + noni + " = " + rslt[i] + "<br>");
+            }
+            console.log("print" + dan + " " + dui);
+            console.log("print" + rslt);
+        }
+
+        function main() {
+            var soo = prompt("두 수를 입력하세요.");
+            var ab = soo[0];
+            var dui = soo[1];
+            var cal = [];
+
+            document.write("<h2>" + ab + ", " + dui + " 단을 실행</h2>");
+            for (var i = 0; i < ab-1; i++) {
+                var dan = i + 2;
+                var cal = calcul(dan, dui);
+                print(dan, dui, cal);
+            }
+        }
+        main();
+    </script>
+    
+</body>
+</html>
